@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zayqa Red - Bold Pakistani Ketchup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Top Bar with Contact Order Number -->
+    <div class="bg-red-700 text-white text-xs sm:text-sm py-2 px-4 text-center font-medium flex flex-col sm:flex-row justify-center items-center gap-2">
+        <span>🚚 Free Delivery across Karachi, Lahore, & Islamabad on orders above PKR 1,000!</span>
+        <span class="bg-red-800 px-3 py-0.5 rounded-full font-bold">📞 Order Now: 0333-1949222</span>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white font-extrabold text-xl shadow-lg">
+                    ZR
+                </div>
+                <div>
+                    <span class="text-2xl font-extrabold tracking-wide text-red-600">ZAYQA RED</span>
+                    <p class="text-xs text-gray-500 font-medium">Asli Mazaa, Asli Zayqa</p>
+                </div>
+            </div>
+
+            <nav class="hidden md:flex items-center space-x-8 font-medium text-gray-700">
+                <a href="#home" class="hover:text-red-600 transition">Home</a>
+                <a href="#categories" class="hover:text-red-600 transition">Categories</a>
+                <a href="#products" class="hover:text-red-600 transition">All Products</a>
+                <a href="#strategy" class="hover:text-red-600 transition">Strategy & Analysis</a>
+                <a href="#contact" class="hover:text-red-600 transition">Contact</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <button onclick="toggleCart()" class="relative bg-red-50 hover:bg-red-100 text-red-600 p-3 rounded-full transition">
+                    <i class="fa-solid fa-cart-shopping text-lg"></i>
+                    <span id="cart-badge" class="absolute -top-1 -right-1 bg-red-600 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold">0</span>
+                </button>
+                <button onclick="openModal('loginModal')" class="bg-red-600 hover:bg-red-700 text-white px-5 py-2.5 rounded-xl font-semibold shadow-md transition">
+                    Login / Signup
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-r from-red-900 via-red-800 to-red-600 text-white py-20 lg:py-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 text-center lg:text-left">
+                <span class="bg-red-500 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">New Tomato Ketchup Brand in Pakistan</span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
+                    Bold Pakistani Taste with <span class="text-yellow-400">Clean-Label</span> Ingredients
+                </h1>
+                <p class="text-lg text-red-100 max-w-xl mx-auto lg:mx-0">
+                    Experience the ultimate richness of Zayqa Red ketchup variants. Made for urban families and food lovers who appreciate pure flavor.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-2">
+                    <a href="#products" class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold px-8 py-4 rounded-xl shadow-lg text-center transition">
+                        Explore All Products
+                    </a>
+                    <a href="tel:03331949222" class="bg-white hover:bg-gray-100 text-red-700 font-bold px-8 py-4 rounded-xl shadow-lg text-center transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-phone"></i> Call 0333-1949222
+                    </a>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="relative w-72 sm:w-96 h-96 bg-red-700/50 rounded-3xl p-6 shadow-2xl flex items-center justify-center overflow-hidden border border-red-500/30">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTakh2xNFEaBooGwfXHJiAt-f0aWs1aIqSPGargaObZUSgCgciKCEURWHI&s=10" alt="Zayqa Red Bottle" class="w-full h-full object-cover rounded-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categories Section -->
+    <section id="categories" class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-2">Shop by Categories</h2>
+            <p class="text-gray-600">Browse through our specialized ketchup categories tailored for every taste bud.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div class="bg-red-50 border border-red-200 rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition">
+                <div class="w-12 h-12 bg-red-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
+                    <i class="fa-solid fa-bowl-food"></i>
+                </div>
+                <h3 class="font-bold text-lg text-gray-900 mb-1">Classic Range</h3>
+                <p class="text-xs text-gray-600">Traditional rich tomato flavor for daily meals.</p>
+            </div>
+            <div class="bg-orange-50 border border-orange-200 rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition">
+                <div class="w-12 h-12 bg-orange-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
+                    <i class="fa-solid fa-fire"></i>
+                </div>
+                <h3 class="font-bold text-lg text-gray-900 mb-1">Spicy & Fusion</h3>
+                <p class="text-xs text-gray-600">Fiery chillies and garlic notes for an extra kick.</p>
+            </div>
+            <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition">
+                <div class="w-12 h-12 bg-emerald-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+                <h3 class="font-bold text-lg text-gray-900 mb-1">Health & Value Packs</h3>
+                <p class="text-xs text-gray-600">Low sugar options and economical family sizes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section with Pictures, Specifications and Prices -->
+    <section id="products" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-white rounded-3xl shadow-sm mb-12 border border-gray-100">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+            <span class="text-red-600 font-bold tracking-widest uppercase text-xs">Catalog & Pricing</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-2 mb-4">All Ketchup Products & Prices</h2>
+            <p class="text-gray-600 text-lg">Select your preferred variant with verified high-quality pictures, detailed specifications, and clear pricing.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Product 1: Classic -->
+            <div class="bg-gray-50 rounded-2xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between hover:shadow-xl transition">
+                <div>
+                    <div class="h-64 bg-white overflow-hidden relative">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTksi6LtisPHyLstrOLtHsp-uV7AT3-zpYCwumRQxsrvg&s=10" alt="Classic Ketchup" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Classic Range</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-1">Zayqa Red Classic</h3>
+                        <p class="text-gray-600 text-sm mb-3">Rich tomato flavor made with authentic local tomatoes and traditional herbs.</p>
+                        <div class="bg-white p-3 rounded-xl border border-gray-200 mb-4 text-xs text-gray-700 space-y-1">
+                            <p><strong>Ingredients:</strong> Fresh Tomatoes, Sugar, Vinegar, Spices</p>
+                            <p><strong>Available Sizes:</strong> Pouch (400g/800g), Bottle (500g)</p>
+                            <p><strong>Shelf Life:</strong> 12 Months</p>
+                        </div>
+                        <div class="text-xl font-extrabold text-red-600">PKR 350</div>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <button onclick="addToCart('Zayqa Red Classic (500g Bottle)', 350)" class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 rounded-xl transition shadow">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 2: Spicy -->
+            <div class="bg-gray-50 rounded-2xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between hover:shadow-xl transition">
+                <div>
+                    <div class="h-64 bg-white overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?w=600&auto=format&fit=crop&q=80" alt="Spicy Ketchup" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-orange-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Spicy & Fusion</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-1">Zayqa Red Spicy</h3>
+                        <p class="text-gray-600 text-sm mb-3">Infused with real red chillies for those who love an extra fiery punch.</p>
+                        <div class="bg-white p-3 rounded-xl border border-gray-200 mb-4 text-xs text-gray-700 space-y-1">
+                            <p><strong>Ingredients:</strong> Tomato Paste, Red Chili Extract, Garlic, Salt</p>
+                            <p><strong>Available Sizes:</strong> Pouch (400g/800g), Bottle (500g)</p>
+                            <p><strong>Shelf Life:</strong> 12 Months</p>
+                        </div>
+                        <div class="text-xl font-extrabold text-red-600">PKR 380</div>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <button onclick="addToCart('Zayqa Red Spicy (500g Bottle)', 380)" class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 rounded-xl transition shadow">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 3: Garlic Chili -->
+            <div class="bg-gray-50 rounded-2xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between hover:shadow-xl transition">
+                <div>
+                    <div class="h-64 bg-white overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=600&auto=format&fit=crop&q=80" alt="Garlic Chili Ketchup" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-amber-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Spicy & Fusion</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-1">Zayqa Red Garlic Chili</h3>
+                        <p class="text-gray-600 text-sm mb-3">A unique blend of fresh garlic and spicy chili notes for snack lovers.</p>
+                        <div class="bg-white p-3 rounded-xl border border-gray-200 mb-4 text-xs text-gray-700 space-y-1">
+                            <p><strong>Ingredients:</strong> Tomatoes, Natural Garlic Pulp, Chili Flakes, Vinegar</p>
+                            <p><strong>Available Sizes:</strong> Pouch (400g), Bottle (500g)</p>
+                            <p><strong>Shelf Life:</strong> 12 Months</p>
+                        </div>
+                        <div class="text-xl font-extrabold text-red-600">PKR 390</div>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <button onclick="addToCart('Zayqa Red Garlic Chili (500g Bottle)', 390)" class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 rounded-xl transition shadow">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 4: Sweet & Sour -->
+            <div class="bg-gray-50 rounded-2xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between hover:shadow-xl transition">
+                <div>
+                    <div class="h-64 bg-white overflow-hidden relative">
+                        <img src="https://4sonrus.com/wp-content/uploads/2023/11/Sweet-And-Sour-Chicken-With-Homemade-Sweet-Sour-Sauce-9.jpg" alt="Sweet & Sour Sauce" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-pink-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Spicy & Fusion</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-1">Zayqa Red Sweet & Sour</h3>
+                        <p class="text-gray-600 text-sm mb-3">Perfect dipping sauce with a delightful balance of sweetness and tanginess.</p>
+                        <div class="bg-white p-3 rounded-xl border border-gray-200 mb-4 text-xs text-gray-700 space-y-1">
+                            <p><strong>Ingredients:</strong> Fruit Extracts, Sugar, Tomato Puree, Apple Cider Vinegar</p>
+                            <p><strong>Available Sizes:</strong> Bottle (450g)</p>
+                            <p><strong>Shelf Life:</strong> 9 Months</p>
+                        </div>
+                        <div class="text-xl font-extrabold text-red-600">PKR 400</div>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <button onclick="addToCart('Zayqa Red Sweet & Sour (450g Bottle)', 400)" class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 rounded-xl transition shadow">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 5: Low Sugar -->
+            <div class="bg-gray-50 rounded-2xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between hover:shadow-xl transition">
+                <div>
+                    <div class="h-64 bg-white overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=600&auto=format&fit=crop&q=80" alt="Low Sugar Ketchup" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Health & Value</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-1">Zayqa Red Low Sugar</h3>
+                        <p class="text-gray-600 text-sm mb-3">Specially crafted for fitness enthusiasts with reduced sugar content.</p>
+                        <div class="bg-white p-3 rounded-xl border border-gray-200 mb-4 text-xs text-gray-700 space-y-1">
+                            <p><strong>Ingredients:</strong> High Tomato Solids, Stevia Extract, Vinegar, Spices</p>
+                            <p><strong>Available Sizes:</strong> Pouch (400g), Bottle (500g)</p>
+                            <p><strong>Shelf Life:</strong> 12 Months</p>
+                        </div>
+                        <div class="text-xl font-extrabold text-red-600">PKR 420</div>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <button onclick="addToCart('Zayqa Red Low Sugar (500g Bottle)', 420)" class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 rounded-xl transition shadow">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 6: Family Pack -->
+            <div class="bg-gray-50 rounded-2xl shadow-md overflow-hidden border border-gray-200 flex flex-col justify-between hover:shadow-xl transition">
+                <div>
+                    <div class="h-64 bg-white overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=600&auto=format&fit=crop&q=80" alt="Family Pack Ketchup" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Health & Value</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-1">Zayqa Red Family Pack</h3>
+                        <p class="text-gray-600 text-sm mb-3">Economical large capacity bottle designed for joint families and gatherings.</p>
+                        <div class="bg-white p-3 rounded-xl border border-gray-200 mb-4 text-xs text-gray-700 space-y-1">
+                            <p><strong>Ingredients:</strong> Fresh Tomatoes, Sugar, Iodized Salt, Stabilizers</p>
+                            <p><strong>Available Sizes:</strong> Jumbo Bottle (1kg)</p>
+                            <p><strong>Shelf Life:</strong> 12 Months</p>
+                        </div>
+                        <div class="text-xl font-extrabold text-red-600">PKR 650</div>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <button onclick="addToCart('Zayqa Red Family Pack (1kg Bottle)', 650)" class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 rounded-xl transition shadow">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategy, Vision, Mission, SWOT & Competitive Analysis Section -->
+    <section id="strategy" class="bg-red-50 py-16 border-y border-red-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            <div class="text-center max-w-3xl mx-auto">
+                <span class="text-red-600 font-bold tracking-widest uppercase text-xs">Coursework & Business Framework</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-2 mb-4">Brand Strategy, Vision & Analysis</h2>
+            </div>
+
+            <!-- Vision & Mission -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-red-100">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Our Vision</h3>
+                    <p class="text-gray-700 leading-relaxed">To become Pakistan's most trusted and loved ketchup brand, setting new benchmarks for quality and natural ingredients.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-red-100">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Target Market & Segmentation</h3>
+                    <ul class="space-y-2 text-gray-700 text-sm">
+                        <li>• <strong>Geographic:</strong> Urban families in Karachi, Lahore, and Islamabad.</li>
+                        <li>• <strong>Demographic:</strong> Young professionals & homemakers (18–35 years).</li>
+                        <li>• <strong>Food Service:</strong> Restaurants and cafes.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SWOT Analysis -->
+            <div class="bg-white rounded-2xl shadow-sm border border-red-100 p-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Comprehensive SWOT Analysis</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-red-50 p-6 rounded-xl border border-red-200">
+                        <h4 class="font-bold text-red-700 text-lg mb-2">Strengths</h4>
+                        <p class="text-sm text-gray-700">Culturally relevant name and natural ingredients.</p>
+                    </div>
+                    <div class="bg-orange-50 p-6 rounded-xl border border-orange-200">
+                        <h4 class="font-bold text-orange-700 text-lg mb-2">Weaknesses</h4>
+                        <p class="text-sm text-gray-700">New market entrant with no prior brand equity.</p>
+                    </div>
+                    <div class="bg-emerald-50 p-6 rounded-xl border border-emerald-200">
+                        <h4 class="font-bold text-emerald-700 text-lg mb-2">Opportunities</h4>
+                        <p class="text-sm text-gray-700">Growth in quick-commerce apps and new flavor extensions.</p>
+                    </div>
+                    <div class="bg-purple-50 p-6 rounded-xl border border-purple-200">
+                        <h4 class="font-bold text-purple-700 text-lg mb-2">Threats</h4>
+                        <p class="text-sm text-gray-700">Rival competitors like Shangrila and National Foods.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Competitive Analysis Table -->
+            <div class="bg-white rounded-2xl shadow-sm border border-red-100 p-8 overflow-x-auto">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Competitive Analysis (Zayqa Red vs Others)</h3>
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-red-600 text-white">
+                            <th class="p-4 rounded-l-xl">Brand</th>
+                            <th class="p-4">Type</th>
+                            <th class="p-4 rounded-r-xl">Price Position</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100 text-sm">
+                        <tr>
+                            <td class="p-4 font-bold text-gray-900">Shangrila</td>
+                            <td class="p-4 text-gray-600">Mass Leader</td>
+                            <td class="p-4 text-gray-600">Low</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-bold text-gray-900">National</td>
+                            <td class="p-4 text-gray-600">Mass</td>
+                            <td class="p-4 text-gray-600">Low</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-bold text-gray-900">Heinz / Kissan</td>
+                            <td class="p-4 text-gray-600">Premium Imported</td>
+                            <td class="p-4 text-gray-600">High</td>
+                        </tr>
+                        <tr class="bg-red-50 font-semibold">
+                            <td class="p-4 font-bold text-red-600">Zayqa Red</td>
+                            <td class="p-4 text-gray-800">New - Mid Premium</td>
+                            <td class="p-4 text-gray-800">Medium</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with Order Contact Info -->
+    <footer id="contact" class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
+            <h4 class="text-xl font-bold text-red-500">ZAYQA RED KETCHUP</h4>
+            <p class="text-sm text-gray-400">Karachi, Pakistan | support@zayqared.com</p>
+            <p class="text-base text-yellow-400 font-bold">Direct Orders & Inquiries: 0333-1949222</p>
+            <p class="text-xs text-gray-500 pt-4">&copy; 2026 Zayqa Red. Designed for Jaffer Hussain.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Drawer -->
+    <div id="cartDrawer" class="fixed inset-0 z-50 overflow-hidden hidden">
+        <div class="absolute inset-0 bg-black/50" onclick="toggleCart()"></div>
+        <div class="absolute inset-y-0 right-0 max-w-full flex pl-10">
+            <div class="w-screen max-w-md bg-white shadow-2xl flex flex-col">
+                <div class="flex items-center justify-between p-6 border-b">
+                    <h3 class="text-xl font-bold text-gray-900">Your Shopping Cart</h3>
+                    <button onclick="toggleCart()" class="text-gray-400 text-xl font-bold">&times;</button>
+                </div>
+                <div id="cartItemsContainer" class="flex-1 overflow-y-auto p-6 space-y-4">
+                    <p class="text-gray-500 text-center py-8">Your cart is currently empty.</p>
+                </div>
+                <div class="p-6 border-t bg-gray-50">
+                    <div class="flex justify-between font-bold text-lg mb-4">
+                        <span>Total:</span>
+                        <span id="cartTotalPrice">PKR 0</span>
+                    </div>
+                    <button onclick="checkout()" class="w-full bg-red-600 hover:bg-red-700 text-white py-3.5 rounded-xl font-bold">
+                        Proceed to Checkout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
+        <div class="absolute inset-0 bg-black/50" onclick="closeModal('loginModal')"></div>
+        <div class="bg-white rounded-2xl max-w-md w-full p-8 relative z-10 shadow-2xl">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold text-gray-900">Login to Zayqa Red</h3>
+                <button onclick="closeModal('loginModal')" class="text-gray-400 text-xl font-bold">&times;</button>
+            </div>
+            <form onsubmit="handleAuth(event)" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                    <input type="email" id="loginEmail" required placeholder="name@example.com" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-red-600">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                    <input type="password" id="loginPassword" required placeholder="••••••••" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-red-600">
+                </div>
+                <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3.5 rounded-xl mt-2 transition">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script>
+        let cart = [];
+
+        function toggleCart() {
+            document.getElementById('cartDrawer').classList.toggle('hidden');
+        }
+
+        function openModal(id) {
+            document.getElementById(id).classList.remove('hidden');
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
+        }
+
+        function addToCart(name, price) {
+            const item = cart.find(i => i.name === name);
+            if (item) { item.qty += 1; } else { cart.push({ name, price, qty: 1 }); }
+            updateCartUI();
+            toggleCart();
+        }
+
+        function updateCartUI() {
+            const container = document.getElementById('cartItemsContainer');
+            const badge = document.getElementById('cart-badge');
+            const totalPriceEl = document.getElementById('cartTotalPrice');
+            let totalCount = 0, totalPrice = 0;
+
+            if (cart.length === 0) {
+                container.innerHTML = '<p class="text-gray-500 text-center py-8">Your cart is currently empty.</p>';
+            } else {
+                container.innerHTML = '';
+                cart.forEach((item, index) => {
+                    totalCount += item.qty;
+                    totalPrice += item.price * item.qty;
+                    container.innerHTML += `
+                        <div class="flex items-center justify-between bg-white p-4 rounded-xl border shadow-sm">
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm">${item.name}</h4>
+                                <p class="text-xs text-red-600 font-semibold">PKR ${item.price} x ${item.qty}</p>
+                            </div>
+                            <button onclick="removeItem(${index})" class="text-red-500 text-sm font-bold">Remove</button>
+                        </div>`;
+                });
+            }
+            badge.innerText = totalCount;
+            totalPriceEl.innerText = `PKR ${totalPrice}`;
+        }
+
+        function removeItem(index) {
+            cart.splice(index, 1);
+            updateCartUI();
+        }
+
+        function checkout() {
+            if (cart.length === 0) { alert('Your cart is empty!'); return; }
+            alert('Order placed successfully! For direct confirmation, call our order line: 0333-1949222.');
+            cart = [];
+            updateCartUI();
+            toggleCart();
+        }
+
+        function handleAuth(e) {
+            e.preventDefault();
+            const email = document.getElementById('loginEmail').value;
+            alert(`Welcome back, ${email}! Successfully logged in.`);
+            closeModal('loginModal');
+        }
+    </script>
+</body>
+</html>
